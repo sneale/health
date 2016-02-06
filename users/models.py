@@ -27,3 +27,8 @@ class Weight(HealthData):
 class PBF(HealthData):
 	user = models.ForeignKey(User, related_name='pbf')
 
+class BFM(HealthData):
+	user = models.ForeignKey(User, related_name='bfm')
+
+class SMM(HealthData):
+	user = models.ForeignKey(User, related_name='smm')
