@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+AUTH_PROFILE_MODULE = 'users.UserProfile'
+
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -120,4 +122,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
-STATIC_URL = '/static/'
+import os.path
+
+STATIC_ROOT = ''
+
+STATIC_URL = '/challenge/assets/'
+
+STATICFILES_DIRS = ('/home/sam/health/challenge/assets',)

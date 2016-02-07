@@ -1,0 +1,86 @@
+/***** MIXINS ***************************************************************************************************/
+.transition(@transition) {
+	-webkit-transition: @transition;
+	-moz-transition:  @transition;
+	-ms-transition: @transition;
+	-o-transition: @transition;
+}
+.opacity(@opacity) {
+	-moz-opacity: @opacity;
+	-khtml-opacity: @opacity;
+	-webkit-opacity: @opacity;
+	opacity: @opacity;
+}
+.br(@radius: 0) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+}
+.rotate(@deg) {
+	-webkit-transform: rotate(@deg);
+	-moz-transform: rotate(@deg);
+	-ms-transform: rotate(@deg);
+	-o-transform: rotate(@deg);
+}
+.boxshadow(@arguments) {
+	-webkit-box-shadow: @arguments;
+	-moz-box-shadow: @arguments;
+	box-shadow: @arguments;
+}
+.verticalMiddle {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.scale(@factor) {
+	-webkit-transform: scale(@factor);
+	-moz-transform: scale(@factor);
+	-ms-transform: scale(@factor);
+	-o-transform: scale(@factor);
+}
+.fs(@sizeValue) {
+	@remValue: @sizeValue;
+	@pxValue: (@sizeValue * 10);
+	font-size: ~"@{pxValue}px";
+	font-size: ~"@{remValue}rem";
+}
+.gradient (@origin: left, @start: @white, @stop: #000000) {
+	background-color: @start;
+	background-image: -webkit-linear-gradient(@origin, @start, @stop);
+	background-image: -moz-linear-gradient(@origin, @start, @stop);
+	background-image: -o-linear-gradient(@origin, @start, @stop);
+	background-image: -ms-linear-gradient(@origin, @start, @stop);
+	background-image: linear-gradient(@origin, @start, @stop);
+}
+.textshadow(@arguments) {
+	-webkit-text-shadow: @arguments;
+	-moz-text-shadow: @arguments;
+	text-shadow: @arguments;
+}
+
+.bold {
+	font-weight: bold;
+}
+.relative {
+	position: relative;
+}
+.absolute {
+	position: absolute;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+
+.unselectable {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}

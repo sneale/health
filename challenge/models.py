@@ -7,7 +7,8 @@ class Customer(models.Model):
 	name = models.CharField(db_index=True, max_length=200)
 	created_date = models.DateTimeField('created date', db_index=True, auto_now_add=True)
 	slug = models.CharField(db_index=True, max_length=200, default='')
-
+	manager = models.ForeignKey(User, related_name='customers_managed', null=True, blank=True)
+	
 	def __str__(self):
 		return self.name
 
@@ -17,6 +18,7 @@ class Team(models.Model):
 	members = models.ManyToManyField(User, related_name='teams')
 	name = models.CharField(db_index=True, max_length=200)
 	slug = models.CharField(db_index=True, max_length=200, default='')
+	latest_index = models.IntegerField(default=1, db_index=True)
 
 	def __str__(self):
 		return self.name

@@ -1,0 +1,547 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Sharpen</title>
+	<meta name="description" content="...">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Icons -->
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" href="assets/css/jquery-ui.min.css">
+	<link rel="stylesheet" href="assets/css/select2.min.css">
+	<link rel="stylesheet" href="assets/font-awesome-4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/fontello.css">
+	<link rel="stylesheet" href="assets/css/chartist.min.css">
+	<link rel="stylesheet" href="assets/css/app.min.css">
+
+	<link href="assets/plugins/codemirror/lib/codemirror.css" rel="stylesheet">
+    <link href="assets/plugins/codemirror/theme/monokai.css" rel="stylesheet">
+
+	
+	<!-- Modernizr -->
+	<script src="assets/js/modernizr-2.8.3.min.js"></script>
+
+	<!-- Google fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+	<!-- Header -->
+	<header id="header">
+		<h1 class="logo">
+			<a href="#" title="#" class="js-nav-toggler">
+				<i class="icon icon-close"></i>
+			</a>
+			<a href="#" title="#">Shar<span>pen</span></a>
+		</h1>
+
+		<div class="pageContent">
+			<div class="container">
+				<ul class="topNavigation">
+					<li>
+						<div class="btn-group simpleList simpleListLighten messages">
+							<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="zmdi zmdi-email zmdi-hc-fw icon"></i>
+								<span class="badge">6</span>
+							</button>
+							
+							<ul class="dropdown-menu pull-right">
+								<li>
+									<a href="#" title="#" class="clearfix">
+										<img src="tmp/44x44-3.jpg" alt="#" width="44" height="44" class="pull-left">
+										<span class="pull-left">
+											<strong class="text-gray">John Doe</strong><br />
+											<span class="text-gray">Proin vel sapien at risus...</span>
+										</span>
+										<span class="pull-right">22 sec. ago</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" title="#" class="clearfix">
+										<img src="tmp/44x44-1.jpg" alt="#" width="44" height="44" class="pull-left">
+										<span class="pull-left">
+											<strong class="text-gray">Jane Doe</strong><br />
+											<span class="text-gray">Aliquam non accumsan...</span>
+										</span>
+										<span class="pull-right">19 min. ago</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" title="#" class="clearfix">
+										<img src="tmp/44x44-4.jpg" alt="#" width="44" height="44" class="pull-left">
+										<span class="pull-left">
+											<strong class="text-gray">Nick Doe</strong><br />
+											<span class="text-gray">Praesent non hendrerit...</span>
+										</span>
+										<span class="pull-right">1 hour ago</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" title="#" class="clearfix">
+										<img src="tmp/44x44-5.jpg" alt="#" width="44" height="44" class="pull-left">
+										<span class="pull-left">
+											<strong class="text-gray">Andrew Doe</strong><br />
+											<span class="text-gray">Aliquam ligula ante magna...</span>
+										</span>
+										<span class="pull-right">21.09.2015</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" title="#" class="clearfix text-center">
+										<i class="zmdi zmdi-plus-square icon"></i> <strong class="text-gray">See all</strong>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="btn-group simpleList list-sm">
+							<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="zmdi zmdi-bookmark zmdi-hc-fw icon"></i>
+								<span class="badge">98</span>
+							</button>
+
+							<ul class="dropdown-menu pull-right">
+								<li>
+									<a href="#" title="#" class="clearfix">
+										<span class="pull-left"><i class="zmdi zmdi-accounts-add zmdi-hc-fw icon"></i> Followers</span>
+										<span class="pull-right info">109,073</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" title="#" class="clearfix">
+										<span class="pull-left"><i class="zmdi zmdi-accounts-list-alt zmdi-hc-fw icon"></i> Subscribers</span>
+										<span class="pull-right info">26,114</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" title="#" class="clearfix">
+										<span class="pull-left"><i class="zmdi zmdi-assignment-o zmdi-hc-fw icon"></i> Products sold</span>
+										<span class="pull-right info">1,557,669</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" title="#" class="clearfix">
+										<span class="pull-left"><i class="zmdi zmdi-bookmark zmdi-hc-fw icon"></i> Awards</span>
+										<span class="pull-right info">14</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" title="#" class="clearfix">
+										<span class="pull-left"><i class="zmdi zmdi-cloud-done zmdi-hc-fw icon"></i> Projects</span>
+										<span class="pull-right info">229</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" title="#" class="clearfix text-center">
+										<i class="zmdi zmdi-plus-square icon"></i> See all
+									</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#" title="#">
+							<i class="zmdi zmdi-fullscreen-alt zmdi-hc-fw icon js-fullscreen-enter"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#" title="#" data-toggle="modal" data-target="#searchModal">
+							<i class="zmdi zmdi-search zmdi-hc-fw icon"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	
+	<aside class="aside">
+		<!-- User profile -->
+		<div class="asideUserProfile">
+			<a href="user-profile.html" title="#" class="c">
+				<img src="tmp/210x210.jpg" alt="#" class="img-responsive">
+				<span class="name hidden-xs hidden-sm">Patricia<br /> Brown-Johnes</span>
+			</a>
+		</div>
+
+		<!-- Navigation -->
+		<nav class="simpleList asideNavigation">
+			<ul>
+				<li><a href="dashboard.html" title="#"><i class="zmdi zmdi-apps zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Dashboard</span></a></li>
+				<li><a href="typography.html" title="#"><i class="zmdi zmdi-format-color-text zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Typography</span></a></li>
+				<li><a href="grid.html" title="#"><i class="zmdi zmdi-view-dashboard zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Grid</span></a></li>
+				<li><a href="tables.html" title="#"><i class="zmdi zmdi-view-day zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Tables</span></a></li>
+				<li class="sub js-submenu">
+					<div><i class="zmdi zmdi-border-color zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Forms <span class="label label-info">1</span><i class="zmdi zmdi-plus plus"></i></span></div>
+					<ul>
+						<li><a href="forms.html" title="#">Form Elements <span class="label label-info">1</span></a></li>
+						<li><a href="wizard.html" title="#">Wizard <span class="label label-info">New</span></a></li>
+					</ul>
+				</li>
+				<li class="sub js-submenu">
+					<div><i class="zmdi zmdi-chart zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Graphs <span class="label label-info">New</span><i class="zmdi zmdi-plus plus"></i></span></div>
+					<ul>
+						<li><a href="graphs-flot.html" title="#">Flot Charts</a></li>
+						<li><a href="graphs-morris.html" title="#">Morris.js Charts</a></li>
+						<li><a href="graphs-chartjs.html" title="#">Chart.js</a></li>
+						<li><a href="graphs-chartist.html" title="#">Chartist</a></li>
+						<li><a href="graphs-rickshaw.html" title="#">Rickshaw <span class="label label-info">New</span></a></li>
+						<li><a href="graphs-peity.html" title="#">Peity <span class="label label-info">New</span></a></li>
+						<li><a href="graphs-sparkline.html" title="#">Sparkline <span class="label label-info">New</span></a></li>
+					</ul>
+				</li>
+				<li><a href="calendar.html" title="#"><i class="zmdi zmdi-calendar-check zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Calendar <span class="label label-info">New</span></span></a></li>
+				<li class="sub js-submenu">
+					<div><i class="zmdi zmdi-tune zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">UI elements <span class="label label-info">2</span><i class="zmdi zmdi-plus plus"></i></span></div>
+
+					<ul>
+						<li><a href="color-schemes.html" title="#">Color schemes</a></li>
+						<li><a href="icons.html" title="#">Icons</a></li>
+						<li><a href="modals.html" title="#">Modals</a></li>
+						<li><a href="alerts.html" title="#">Alerts</a></li>
+						<li><a href="accordion.html" title="#">Accordion</a></li>
+						<li><a href="progress-bars.html" title="#">Progress Bars</a></li>
+						<li><a href="tabs.html" title="#">Tabs</a></li>
+						<li><a href="buttons.html" title="#">Buttons</a></li>
+						<li><a href="breadcrumbs.html" title="#">Breadcrumbs</a></li>
+						<li><a href="file-trees.html" title="#">File trees <span class="label label-info">New</span></a></li>
+						<li><a href="panels.html" title="#">Panels <span class="label label-info">New</span></a></li>
+					</ul>
+				</li>
+				<li class="sub js-submenu">
+					<div><i class="zmdi zmdi-format-clear-all zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Pages <span class="label label-info">3</span><i class="zmdi zmdi-plus plus"></i></span></div>
+
+					<ul>
+						<li><a href="user-profile.html" title="#">User Profile</a></li>
+						<li><a href="cards.html" title="#">Cards</a></li>
+						<li><a href="login.html" title="#">Sign In</a></li>
+						<li><a href="sign-up.html" title="#">Sing Up</a></li>
+						<li><a href="forgot-password.html" title="#">Forgot Password</a></li>
+						<li><a href="search-results.html" title="#">Search Results <span class="label label-info">New</span></a></li>
+						<li><a href="faq.html" title="#">FAQ <span class="label label-info">New</span></a></li>
+						<li><a href="invoice.html" title="#">Invoice <span class="label label-info">New</span></a></li>
+					</ul>
+				</li>
+				<li class="sub js-submenu active">
+					<div><i class="zmdi zmdi-playlist-plus zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Extras <i class="zmdi zmdi-plus plus"></i></span></div>
+
+					<ul class="active">
+						<li><a href="gallery-grid.html" title="#">Gallery</a></li>
+						<li><a href="google-maps.html" title="#">Google maps</a></li>
+						<li class="active"><a href="code-editors.html" title="#">Code editors <span class="label label-info">New</span></a></li>
+						<li><a href="media-videos.html" title="#">Video players <span class="label label-info">New</span></a></li>
+						<li><a href="dashboard-short-sidebar.html" title="#">Short sidebar<span class="label label-info">New</span></a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+
+		<!-- Pending tasks -->
+		<div class="progessInfo hidden-xs hidden-sm">
+			<h2 class="boxTitle">Pending tasks <span class="badge">8</span></h2>
+
+			<ul>
+				<li>
+					<div class="title">Calendar</div>
+					<div class="progress">
+						<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
+							<span class="sr-only">85% Complete</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="title">Breadcrumbs</div>
+					<div class="progress">
+						<div class="progress-bar progress-bar-striped bg-green active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+							<span class="sr-only">60% Complete</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="title">FAQ</div>
+					<div class="progress">
+						<div class="progress-bar progress-bar-striped bg-blue active" role="progressbar" aria-valuenow="17" aria-valuemin="0" aria-valuemax="100" style="width: 17%;">
+							<span class="sr-only">17% Complete</span>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</aside>
+
+	<!-- Page Wrap -->
+	<div class="pageWrap">
+
+		<!-- Page content -->
+		<div class="pageContent extended">
+			<div class="container">
+
+				<!-- Task Cards -->
+				<h1 class="pageTitle">
+					<a href="#" title="#">Code Editors</a>
+				</h1>
+				<ol class="breadcrumb">
+					<li><a href="dashboard.html">Sharpen</a></li>
+					<li><a href="#">Miscellaneous</a></li>
+					<li class="active">Code editors</li>
+				</ol>
+				
+				
+				<div class="row">
+					
+
+					<!-- Code Editor 1 -->
+					<div class="col-xs-12 col-sm-12">
+						<div class="box rte">
+							<h2 class="boxHeadline">Code mirror editor</h2>
+							<h3 class="boxHeadlineSub">About</h3>
+							
+							<p>
+								<a target="_blank" href="http://codemirror.net/index.html">CodeMirror</a> is a versatile text editor implemented in JavaScript for the browser. It is specialized for editing code, and comes with a number of language modes and addons that implement more advanced editing functionality.
+							</p>
+							<h4>Features</h4>
+							<ul>
+								 <li>Support for <a target="_blank" href="http://codemirror.net/mode/index.html">over 100 languages</a> out of the box
+								 <li>A powerful, <a target="_blank" href="http://codemirror.net/mode/htmlmixed/index.html">composable</a> language mode <a target="_blank" href="http://codemirror.net/doc/manual.html#modeapi">system</a>
+								 <li><a target="_blank" href="http://codemirror.net/doc/manual.html#addon_show-hint">Autocompletion</a> (<a href="http://codemirror.net/demo/xmlcomplete.html">XML</a>)
+								 <li><a target="_blank" href="http://codemirror.net/doc/manual.html#addon_foldcode">Code folding</a>
+								 <li><a target="_blank" href="http://codemirror.net/doc/manual.html#option_extraKeys">Configurable</a> keybindings
+								 <li><a target="_blank" href="http://codemirror.net/demo/vim.html">Vim</a>, <a target="_blank" href="http://codemirror.net/demo/emacs.html">Emacs</a>, and <a target="_blank" href="http://codemirror.net/demo/sublime.html">Sublime Text</a> bindings
+								 <li><a target="_blank" href="http://codemirror.net/doc/manual.html#addon_search">Search and replace</a> interface
+								 <li><a target="_blank" href="http://codemirror.net/doc/manual.html#addon_matchbrackets">Bracket</a> and <a target="_blank" href="http://codemirror.net/doc/manual.html#addon_matchtags">tag</a> matching
+								 <li>Support for <a target="_blank" href="http://codemirror.net/demo/buffers.html">split views</a>
+								 <li><a target="_blank" href="http://codemirror.net/doc/manual.html#addon_lint">Linter integration</a>
+								 <li><a target="_blank" href="http://codemirror.net/demo/variableheight.html">Mixing font sizes and styles</a>
+								 <li><a target="_blank" href="http://codemirror.net/demo/theme.html">Various themes</a>
+								 <li>Able to <a target="_blank"  href="http://codemirror.net/demo/resize.html">resize to fit content</a>
+								 <li><a target="_blank" href="http://codemirror.net/doc/manual.html#mark_replacedWith">Inline</a> and <a target="_blank" href="http://codemirror.net/doc/manual.html#addLineWidget">block</a> widgets
+								 <li>Programmable <a target="_blank" href="http://codemirror.net/demo/marker.html">gutters</a>
+								 <li>Making ranges of text <a target="_blank" href="http://codemirror.net/doc/manual.html#markText">styled, read-only, or atomic</a>
+								 <li><a target="_blank" href="http://codemirror.net/demo/bidi.html">Bi-directional text</a> support
+								 <li>Many other <a target="_blank" href="http://codemirror.net/doc/manual.html#api">methods</a> and <a  target="_blank" href="http://codemirror.net/doc/manual.html#addons">addons</a>...
+							</ul>
+
+							<hr>
+
+  							<h3 class="boxHeadline">Basic example</h3>
+
+  							<textarea id="code-editor-1">
+<script>
+this.each(function(i, _element) { // loop each DOM element involved
+	var element = $(_element);
+	var calendar = element.data('fullCalendar'); // get the existing calendar object (if any)
+	var singleRes; // the returned value of this single method call
+
+	// a method call
+	if (typeof options === 'string') {
+		if (calendar && $.isFunction(calendar[options])) {
+			singleRes = calendar[options].apply(calendar, args);
+			if (!i) {
+				res = singleRes; // record the first method call result
+			}
+			if (options === 'destroy') { // for the destroy method, must remove Calendar object data
+				element.removeData('fullCalendar');
+			}
+		}
+	}
+});
+</script>
+							</textarea>
+
+
+							<hr>
+
+				
+							<h3 class="boxHeadline">Theme example</h3>
+							<h4 class="boxHeadlineSub">Theme <b>monokai</b></h4>
+
+							<textarea id="code-editor-2">
+// javascript code
+(function(factory) {
+	if (typeof define === 'function' && define.amd) {
+		define([ 'jquery', 'moment' ], factory);
+	}
+	else if (typeof exports === 'object') { // Node/CommonJS
+		module.exports = factory(require('jquery'), require('moment'));
+	}
+	else {
+		factory(jQuery, moment);
+	}
+})(function($, moment) {
+						</textarea>
+
+
+						</div>
+					</div>
+
+					<div class="col-xs-12 col-sm-12">
+						<div class="box rte">
+							<h2 class="boxHeadline">Ace editor</h2>
+							<h3 class="boxHeadlineSub">About</h3>
+							
+							<p>
+								<a href="https://ace.c9.io/" target="_blank">Ace</a> is an embeddable code editor written in JavaScript. It matches the features and performance of native editors such as Sublime, Vim and TextMate. It can be easily embedded in any web page and JavaScript application. Ace is maintained as the primary editor for Cloud9 IDE and is the successor of the Mozilla Skywriter (Bespin) project.
+							</p>
+							<h4>Features</h4>
+							<ul class="content-list">
+								<li><a target="_blank" href="http://pcwalton.blogspot.com/2010/11/syntax-highlighting-specification.html">Syntax highlighting</a> for over 110 languages (TextMate/Sublime Text<em>.tmlanguage</em> files can be imported)</li>
+								<li>Over 20 themes (TextMate/Sublime Text <em>.tmtheme</em> files can be imported)</li>
+								<li>Automatic indent and outdent</li>
+								<li>An optional command line</li>
+								<li>Handles huge documents (four million lines seems to be the limit!)</li>
+								<li>Fully customizable key bindings including vim and Emacs modes</li>
+								<li>Search and replace with regular expressions</li>
+								<li>Highlight matching parentheses</li>
+								<li>Toggle between soft tabs and real tabs</li>
+								<li>Displays hidden characters</li>
+								<li>Drag and drop text using the mouse</li>
+								<li>Line wrapping</li>
+								<li>Code folding</li>
+								<li>Multiple cursors and selections</li>
+								<li>Live syntax checker (currently JavaScript/CoffeeScript/CSS/XQuery)</li>
+								<li>Cut, copy, and paste functionality</li>
+							</ul>
+
+							<hr>
+
+							<h3 class="boxHeadline">Theme example 1.</h3>
+							<h4 class="boxHeadlineSub">Theme <b>monokai</b></h4>
+
+							<div style="position:relative; width:100%; height:250px">
+
+								<div id="ace-editor-1">
+function compensateScroll(rowEls, scrollbarWidths) {
+	if (scrollbarWidths.left) {
+		rowEls.css({
+			'border-left-width': 1,
+			'margin-left': scrollbarWidths.left - 1
+		});
+	}
+	if (scrollbarWidths.right) {
+		rowEls.css({
+			'border-right-width': 1,
+			'margin-right': scrollbarWidths.right - 1
+		});
+	}
+}</div>
+
+							</div>
+
+							<hr>
+
+							<h3 class="boxHeadline">Theme example 2.</h3>
+							<h4 class="boxHeadlineSub">Theme <b>github</b></h4>
+							
+
+							<div style="position:relative; width:100%; height:200px">
+
+								<div id="ace-editor-2">
+// Make the mouse cursor express that an event is not allowed in the current area
+function disableCursor() {
+	$('body').addClass('fc-not-allowed');
+}
+
+
+// Returns the mouse cursor to its original look
+function enableCursor() {
+	$('body').removeClass('fc-not-allowed');
+}</div>
+
+							</div>
+
+						</div>
+					</div>
+
+				
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Search modal -->
+	<div class="modal fade in" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body">
+					<form>
+						<input type="text" class="form-control" placeholder="Type search term...">
+						<button type="submit" class="btn">Go</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- JS -->
+	<script src="assets/js/jquery-1.11.3.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/js/jquery-ui.min.js"></script>
+	<script src="assets/js/select2.min.js"></script>
+	<script src="assets/js/parsley.min.js"></script>
+	<script src="assets/js/throttle-debounce.min.js"></script>
+	<script src="assets/js/jquery.shuffle.min.js"></script>
+	<script src="assets/js/autosize.min.js"></script>
+	<script src="assets/js/raphael-min.js"></script>
+	<script src="assets/js/morris.min.js"></script>
+	<script src="assets/js/Chart.min.js"></script>
+	<script src="assets/js/chartist.min.js"></script>
+	<script src="assets/js/jquery.fullscreen.min.js"></script>
+	<script src="assets/js/app.min.js"></script>
+
+	<!-- CodeMirror -->
+    <script src="assets/plugins/codemirror/lib/codemirror.js"></script>
+    <script src="assets/plugins/codemirror/mode/javascript/javascript.js"></script>
+    <script>
+         $(document).ready(function(){
+
+             var editor1 = CodeMirror.fromTextArea(document.getElementById("code-editor-1"), {
+                 lineNumbers: true,
+                 matchBrackets: true,
+                 styleActiveLine: true
+             });
+
+             var editor2 = CodeMirror.fromTextArea(document.getElementById("code-editor-2"), {
+                 lineNumbers: true,
+                 matchBrackets: true,
+                 styleActiveLine: true,
+                 theme:"monokai"
+             });
+
+        });
+    </script>
+
+    <!-- Ace editor -->
+    <style type="text/css" media="screen">
+	    #ace-editor-1, #ace-editor-2 { 
+	        position: absolute;
+	        top: 0;
+	        right: 0;
+	        bottom: 0;
+	        left: 0;
+	    }
+	</style>
+    <script src="assets/plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		var ace_editor1 = ace.edit("ace-editor-1");
+		ace_editor1.setTheme("ace/theme/monokai");
+		ace_editor1.getSession().setMode("ace/mode/javascript");
+
+		var ace_editor2 = ace.edit("ace-editor-2");
+		ace_editor2.setTheme("ace/theme/github");
+		ace_editor2.getSession().setMode("ace/mode/javascript");
+	</script>
+
+
+
+	<div class="visible-xs visible-sm extendedChecker"></div>
+</body>
+</html>

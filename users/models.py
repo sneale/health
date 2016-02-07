@@ -1,11 +1,13 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from django.db.models.signals import post_save
 from django.contrib.auth.models import User
 
 class UserProfile(models.Model):
-	user = models.OneToOneField(User)
-	dob = models.DateField('Date of Birth')
+	customer = models.ForeignKey('challenge.Customer', related_name='users', null=True, blank=True)
+	user = models.OneToOneField(User, primary_key=True)
+	dob = models.DateField('Date of, Birth', null=True, blank=True)
 	active = models.BooleanField(default=True)
 	GENDER_MALE = 0
 	GENDER_FEMALE = 1
@@ -14,7 +16,23 @@ class UserProfile(models.Model):
 		(GENDER_FEMALE, 'Female'),
 	]
 
-	gender = models.IntegerField(choices=GENDER_CHOICES)
+	gender = models.IntegerField(choices=GENDER_CHOICES, default=0)
+
+	def __str__(self):
+		return "%s's profile" % self.user
+
+	def can_manage(self, customer):
+		if self.is_superuser or customer.manager.id == self.id:
+			return True
+		return False
+
+def create_user_profile(sender, instance, created, **kwargs):
+	print '1'
+	if created:
+		print '2'
+		profile, created = UserProfile.objects.get_or_create(user=instance)  
+
+post_save.connect(create_user_profile, sender=User)
 
 class HealthData(models.Model):
 	date = models.DateField('Date', db_index=True, auto_now_add=True)

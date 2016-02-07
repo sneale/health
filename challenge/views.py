@@ -1,10 +1,14 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.template import loader
 
 from models import Customer, Team
 
 def index(request):
-	return HttpResponse("Index page")
+	template = loader.get_template('dashboard.html')
+	print request.user
+	context = {}
+	return HttpResponse(template.render(context, request))
 
 def customer(request, customer_id):
 	customer = Customer.objects.get(id=customer_id)
