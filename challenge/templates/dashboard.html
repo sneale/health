@@ -1,585 +1,149 @@
-<!templates/doctype html>templates/
-<html class="no-js" lang="">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Sharpen</title>
-	<meta name="description" content="...">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<!-- Icons -->
-	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+{% extends "base.html" %}
+		
+	{% block container %}
+		<div class="boxHeader pageBoxHeader clearfix">
+			<div class="pull-left">
+				<h1 class="pageTitle">
+					<a href="#" title="#">Dashboard</a>
+				</h1>
+				<ol class="breadcrumb">
+					<li><a href="templates/dashboard.html">Sharpen</a></li>
+					<li class="active">Dashboard</li>
+				</ol>
+			</div>
 
-	<!-- CSS -->
-	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
-	<link rel="stylesheet" href="assets/css/jquery-ui.min.css">
-	<link rel="stylesheet" href="assets/css/select2.min.css">
-	<link rel="stylesheet" href="assets/font-awesome-4.4.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="assets/css/fontello.css">
-	<link rel="stylesheet" href="assets/css/chartist.min.css">
-	<link rel="stylesheet" href="assets/css/app.min.css">
-	
-	<!-- Modernizr -->
-	<script src="assets/js/modernizr-2.8.3.min.js"></script>
-
-	<!-- Google fonts -->
-	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
-</head>
-<body>
-	<!--[if lt IE 8]>
-		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-	<![endif]-->
-
-	<!-- Header -->
-	<header id="header">
-		<h1 class="logo">
-			<a href="#" title="#" class="js-nav-toggler">
-				<i class="icon icon-close"></i>
-			</a>
-			<a href="#" title="#">Shar<span>pen</span></a>
-		</h1>
-
-		<div class="pageContent">
-			<div class="container">
-				<ul class="topNavigation">
-					<li>
-						<div class="btn-group simpleList simpleListLighten messages">
-							<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<i class="zmdi zmdi-email zmdi-hc-fw icon"></i>
-								<span class="badge">6</span>
-							</button>
-							
-							<ul class="dropdown-menu pull-right">
-								<li>
-									<a href="#" title="#" class="clearfix">
-										<img src="tmp/44x44-3.jpg" alt="#" width="44" height="44" class="pull-left">
-										<span class="pull-left">
-											<strong class="text-gray">John Doe</strong><br />
-											<span class="text-gray">Proin vel sapien at risus...</span>
-										</span>
-										<span class="pull-right">22 sec. ago</span>
-									</a>
-								</li>
-								<li>
-									<a href="#" title="#" class="clearfix">
-										<img src="tmp/44x44-1.jpg" alt="#" width="44" height="44" class="pull-left">
-										<span class="pull-left">
-											<strong class="text-gray">Jane Doe</strong><br />
-											<span class="text-gray">Aliquam non accumsan...</span>
-										</span>
-										<span class="pull-right">19 min. ago</span>
-									</a>
-								</li>
-								<li>
-									<a href="#" title="#" class="clearfix">
-										<img src="tmp/44x44-4.jpg" alt="#" width="44" height="44" class="pull-left">
-										<span class="pull-left">
-											<strong class="text-gray">Nick Doe</strong><br />
-											<span class="text-gray">Praesent non hendrerit...</span>
-										</span>
-										<span class="pull-right">1 hour ago</span>
-									</a>
-								</li>
-								<li>
-									<a href="#" title="#" class="clearfix">
-										<img src="tmp/44x44-5.jpg" alt="#" width="44" height="44" class="pull-left">
-										<span class="pull-left">
-											<strong class="text-gray">Andrew Doe</strong><br />
-											<span class="text-gray">Aliquam ligula ante magna...</span>
-										</span>
-										<span class="pull-right">21.09.2015</span>
-									</a>
-								</li>
-								<li>
-									<a href="#" title="#" class="clearfix text-center">
-										<i class="zmdi zmdi-plus-square icon"></i> <strong class="text-gray">See all</strong>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</li>
-					<li>
-						<div class="btn-group simpleList list-sm">
-							<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<i class="zmdi zmdi-bookmark zmdi-hc-fw icon"></i>
-								<span class="badge">98</span>
-							</button>
-
-							<ul class="dropdown-menu pull-right">
-								<li>
-									<a href="#" title="#" class="clearfix">
-										<span class="pull-left"><i class="zmdi zmdi-accounts-add zmdi-hc-fw icon"></i> Followers</span>
-										<span class="pull-right info">109,073</span>
-									</a>
-								</li>
-								<li>
-									<a href="#" title="#" class="clearfix">
-										<span class="pull-left"><i class="zmdi zmdi-accounts-list-alt zmdi-hc-fw icon"></i> Subscribers</span>
-										<span class="pull-right info">26,114</span>
-									</a>
-								</li>
-								<li>
-									<a href="#" title="#" class="clearfix">
-										<span class="pull-left"><i class="zmdi zmdi-assignment-o zmdi-hc-fw icon"></i> Products sold</span>
-										<span class="pull-right info">1,557,669</span>
-									</a>
-								</li>
-								<li>
-									<a href="#" title="#" class="clearfix">
-										<span class="pull-left"><i class="zmdi zmdi-bookmark zmdi-hc-fw icon"></i> Awards</span>
-										<span class="pull-right info">14</span>
-									</a>
-								</li>
-								<li>
-									<a href="#" title="#" class="clearfix">
-										<span class="pull-left"><i class="zmdi zmdi-cloud-done zmdi-hc-fw icon"></i> Projects</span>
-										<span class="pull-right info">229</span>
-									</a>
-								</li>
-								<li>
-									<a href="#" title="#" class="clearfix text-center">
-										<i class="zmdi zmdi-plus-square icon"></i> See all
-									</a>
-								</li>
-							</ul>
-						</div>
-					</li>
-					<li>
-						<a href="#" title="#">
-							<i class="zmdi zmdi-fullscreen-alt zmdi-hc-fw icon js-fullscreen-enter"></i>
-						</a>
-					</li>
-					<li>
-						<a href="#" title="#" data-toggle="modal" data-target="#searchModal">
-							<i class="zmdi zmdi-search zmdi-hc-fw icon"></i>
-						</a>
-					</li>
+			<div class="btn-group pull-right boxHeaderOptions">
+				<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<i class="zmdi zmdi-more-vert"></i>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a href="#" title="#"><i class="zmdi zmdi-time-restore zmdi-hc-fw"></i> Today</a></li>
+					<li><a href="#" title="#"><i class="zmdi zmdi-time-restore zmdi-hc-fw"></i> Yesterday</a></li>
+					<li><a href="#" title="#"><i class="zmdi zmdi-time-restore zmdi-hc-fw"></i> Last week</a></li>
+					<li><a href="#" title="#"><i class="zmdi zmdi-time-restore zmdi-hc-fw"></i> Last month</a></li>
 				</ul>
 			</div>
 		</div>
-	</header>
-	
-	<aside class="aside">
-		<!-- User profile -->
-		<div class="asideUserProfile">
-			<a href="user-templates/profile.html" title="#" class="c">
-				<img src="tmp/210x210.jpg" alt="#" class="img-responsive">
-				<span class="name hidden-xs hidden-sm">Patricia<br /> Brown-Johnes</span>
-			</a>
-		</div>
-
-		<!-- Navigation -->
-		<nav class="simpleList asideNavigation">
-			<ul>
-				<li class="active"><a href="templates/dashboard.html" title="#"><i class="zmdi zmdi-apps zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Dashboard</span></a></li>
-				<li><a href="templates/typography.html" title="#"><i class="zmdi zmdi-format-color-text zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Typography</span></a></li>
-				<li><a href="templates/grid.html" title="#"><i class="zmdi zmdi-view-dashboard zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Grid</span></a></li>
-				<li><a href="templates/tables.html" title="#"><i class="zmdi zmdi-view-day zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Tables</span></a></li>
-				<li class="sub js-submenu">
-					<div><i class="zmdi zmdi-border-color zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Forms <span class="label label-info">1</span><i class="zmdi zmdi-plus plus"></i></span></div>
-					<ul>
-						<li><a href="templates/forms.html" title="#">Form Elements <span class="label label-info">1</span></a></li>
-						<li><a href="templates/wizard.html" title="#">Wizard <span class="label label-info">New</span></a></li>
-					</ul>
-				</li>
-				<li class="sub js-submenu">
-					<div><i class="zmdi zmdi-chart zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Graphs <span class="label label-info">New</span><i class="zmdi zmdi-plus plus"></i></span></div>
-					<ul>
-						<li><a href="graphs-templates/flot.html" title="#">Flot Charts</a></li>
-						<li><a href="graphs-templates/morris.html" title="#">Morris.js Charts</a></li>
-						<li><a href="graphs-templates/chartjs.html" title="#">Chart.js</a></li>
-						<li><a href="graphs-templates/chartist.html" title="#">Chartist</a></li>
-						<li><a href="graphs-templates/rickshaw.html" title="#">Rickshaw <span class="label label-info">New</span></a></li>
-						<li><a href="graphs-templates/peity.html" title="#">Peity <span class="label label-info">New</span></a></li>
-						<li><a href="graphs-templates/sparkline.html" title="#">Sparkline <span class="label label-info">New</span></a></li>
-					</ul>
-				</li>
-				<li><a href="templates/calendar.html" title="#"><i class="zmdi zmdi-calendar-check zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Calendar <span class="label label-info">New</span></span></a></li>
-				<li class="sub js-submenu">
-					<div><i class="zmdi zmdi-tune zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">UI elements <span class="label label-info">2</span><i class="zmdi zmdi-plus plus"></i></span></div>
-
-					<ul>
-						<li><a href="color-templates/schemes.html" title="#">Color schemes</a></li>
-						<li><a href="templates/icons.html" title="#">Icons</a></li>
-						<li><a href="templates/modals.html" title="#">Modals</a></li>
-						<li><a href="templates/alerts.html" title="#">Alerts</a></li>
-						<li><a href="templates/accordion.html" title="#">Accordion</a></li>
-						<li><a href="progress-templates/bars.html" title="#">Progress Bars</a></li>
-						<li><a href="templates/tabs.html" title="#">Tabs</a></li>
-						<li><a href="templates/buttons.html" title="#">Buttons</a></li>
-						<li><a href="templates/breadcrumbs.html" title="#">Breadcrumbs</a></li>
-						<li><a href="file-templates/trees.html" title="#">File trees <span class="label label-info">New</span></a></li>
-						<li><a href="templates/panels.html" title="#">Panels <span class="label label-info">New</span></a></li>
-					</ul>
-				</li>
-				<li class="sub js-submenu">
-					<div><i class="zmdi zmdi-format-clear-all zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Pages <span class="label label-info">3</span><i class="zmdi zmdi-plus plus"></i></span></div>
-
-					<ul>
-						<li><a href="user-templates/profile.html" title="#">User Profile</a></li>
-						<li><a href="templates/cards.html" title="#">Cards</a></li>
-						<li><a href="templates/login.html" title="#">Sign In</a></li>
-						<li><a href="sign-templates/up.html" title="#">Sing Up</a></li>
-						<li><a href="forgot-templates/password.html" title="#">Forgot Password</a></li>
-						<li><a href="search-templates/results.html" title="#">Search Results <span class="label label-info">New</span></a></li>
-						<li><a href="templates/faq.html" title="#">FAQ <span class="label label-info">New</span></a></li>
-						<li><a href="templates/invoice.html" title="#">Invoice <span class="label label-info">New</span></a></li>
-					</ul>
-				</li>
-				<li class="sub js-submenu">
-					<div><i class="zmdi zmdi-playlist-plus zmdi-hc-fw icon"></i> <span class="hidden-xs hidden-sm">Extras <i class="zmdi zmdi-plus plus"></i></span></div>
-
-					<ul>
-						<li><a href="gallery-templates/grid.html" title="#">Gallery</a></li>
-						<li><a href="google-templates/maps.html" title="#">Google maps</a></li>
-						<li><a href="code-templates/editors.html" title="#">Code editors <span class="label label-info">New</span></a></li>
-						<li><a href="media-templates/videos.html" title="#">Video players <span class="label label-info">New</span></a></li>
-						<li><a href="dashboard-short-templates/sidebar.html" title="#">Short sidebar<span class="label label-info">New</span></a></li>
-					</ul>
-				</li>
-			</ul>
-		</nav>
 		
-		<!-- Pending tasks -->
-		<div class="progessInfo hidden-xs hidden-sm">
-			<h2 class="boxTitle">Pending tasks <span class="badge">8</span></h2>
-
-			<ul>
-				<li>
-					<div class="title">Calendar</div>
-					<div class="progress">
-						<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
-							<span class="sr-only">85% Complete</span>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="title">Breadcrumbs</div>
-					<div class="progress">
-						<div class="progress-bar progress-bar-striped bg-green active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-							<span class="sr-only">60% Complete</span>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="title">FAQ</div>
-					<div class="progress">
-						<div class="progress-bar progress-bar-striped bg-blue active" role="progressbar" aria-valuenow="17" aria-valuemin="0" aria-valuemax="100" style="width: 17%;">
-							<span class="sr-only">17% Complete</span>
-						</div>
-					</div>
-				</li>
-			</ul>
+		<!-- Statsbar -->
+		<div class="statsBar">
+			<div class="row">
+				<div class="col-xs-12 col-md-4 i yellow">
+					<a href="#" title="#" class="c">
+						<h3 class="title">Website traffic</h3>
+						<div class="num">256,521</div>
+						<i class="icon zmdi zmdi-globe"></i>
+					</a>
+				</div>
+				<div class="col-xs-12 col-md-4 i pink">
+					<a href="#" title="#" class="c">
+						<h3 class="title">Files downloaded</h3>
+						<div class="num">5,478,123</div>
+						<i class="icon zmdi zmdi-square-down"></i>
+					</a>
+				</div>
+				<div class="col-xs-12 col-md-4 i green">
+					<a href="#" title="#" class="c">
+						<h3 class="title">Total sales</h3>
+						<div class="num">14,789</div>
+						<i class="icon zmdi zmdi-card"></i>
+					</a>
+				</div>
+			</div>
 		</div>
-	</aside>
-	
-	<!-- Page Wrap -->
-	<div class="pageWrap">
 
-		<!-- Page content -->
-		<div class="pageContent extended">
-			<div class="container">
-				<div class="boxHeader pageBoxHeader clearfix">
-					<div class="pull-left">
-						<h1 class="pageTitle">
-							<a href="#" title="#">Dashboard</a>
-						</h1>
-						<ol class="breadcrumb">
-							<li><a href="templates/dashboard.html">Sharpen</a></li>
-							<li class="active">Dashboard</li>
-						</ol>
-					</div>
+		<div class="row">
+			<div class="col-xs-12 col-md-6">
+				<div class="box box-without-padding">
 
-					<div class="btn-group pull-right boxHeaderOptions">
-						<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<i class="zmdi zmdi-more-vert"></i>
-						</button>
-						<ul class="dropdown-menu">
-							<li><a href="#" title="#"><i class="zmdi zmdi-time-restore zmdi-hc-fw"></i> Today</a></li>
-							<li><a href="#" title="#"><i class="zmdi zmdi-time-restore zmdi-hc-fw"></i> Yesterday</a></li>
-							<li><a href="#" title="#"><i class="zmdi zmdi-time-restore zmdi-hc-fw"></i> Last week</a></li>
-							<li><a href="#" title="#"><i class="zmdi zmdi-time-restore zmdi-hc-fw"></i> Last month</a></li>
-						</ul>
-					</div>
-				</div>
-				
-				<!-- Statsbar -->
-				<div class="statsBar">
-					<div class="row">
-						<div class="col-xs-12 col-md-4 i yellow">
-							<a href="#" title="#" class="c">
-								<h3 class="title">Website traffic</h3>
-								<div class="num">256,521</div>
-								<i class="icon zmdi zmdi-globe"></i>
-							</a>
-						</div>
-						<div class="col-xs-12 col-md-4 i pink">
-							<a href="#" title="#" class="c">
-								<h3 class="title">Files downloaded</h3>
-								<div class="num">5,478,123</div>
-								<i class="icon zmdi zmdi-square-down"></i>
-							</a>
-						</div>
-						<div class="col-xs-12 col-md-4 i green">
-							<a href="#" title="#" class="c">
-								<h3 class="title">Total sales</h3>
-								<div class="num">14,789</div>
-								<i class="icon zmdi zmdi-card"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-xs-12 col-md-6">
-						<div class="box box-without-padding">
-
-							<div class="clearfix boxHeader">
-								<h2 class="boxTitle pull-left">Traffic overview</h2>
-								<div class="btn-group pull-right boxHeaderOptions">
-									<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-										<i class="zmdi zmdi-more-vert"></i>
-									</button>
-									<ul class="dropdown-menu">
-										<li><a href="#" title="#"><i class="zmdi zmdi-time-restore zmdi-hc-fw"></i> Time span</a></li>
-										<li><a href="#" title="#"><i class="zmdi zmdi-chart zmdi-hc-fw"></i> Chart type</a></li>
-										<li><a href="#" title="#"><i class="zmdi zmdi-refresh zmdi-hc-fw"></i> Refresh</a></li>
-									</ul>
-								</div>	
-							</div>
-
-							<!-- Tabs -->
-							<ul class="nav nav-tabs" role="tablist">
-								<li role="presentation" class="active"><a href="#tab-item-1" aria-controls="tab-item-1" role="tab" data-toggle="tab">Countries</a></li>
-								<li role="presentation"><a href="#tab-item-2" aria-controls="tab-item-2" role="tab" data-toggle="tab">Used devices</a></li>
+					<div class="clearfix boxHeader">
+						<h2 class="boxTitle pull-left">Traffic overview</h2>
+						<div class="btn-group pull-right boxHeaderOptions">
+							<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="zmdi zmdi-more-vert"></i>
+							</button>
+							<ul class="dropdown-menu">
+								<li><a href="#" title="#"><i class="zmdi zmdi-time-restore zmdi-hc-fw"></i> Time span</a></li>
+								<li><a href="#" title="#"><i class="zmdi zmdi-chart zmdi-hc-fw"></i> Chart type</a></li>
+								<li><a href="#" title="#"><i class="zmdi zmdi-refresh zmdi-hc-fw"></i> Refresh</a></li>
 							</ul>
+						</div>	
+					</div>
 
-							<div class="tab-content">
+					<!-- Tabs -->
+					<ul class="nav nav-tabs" role="tablist">
+						<li role="presentation" class="active"><a href="#tab-item-1" aria-controls="tab-item-1" role="tab" data-toggle="tab">Countries</a></li>
+						<li role="presentation"><a href="#tab-item-2" aria-controls="tab-item-2" role="tab" data-toggle="tab">Used devices</a></li>
+					</ul>
 
-								<!-- Countries -->
-								<div role="tabpanel" class="tab-pane fade in active" id="tab-item-1">
-									<!-- <div id="donut-chart"></div> -->
+					<div class="tab-content">
+
+						<!-- Countries -->
+						<div role="tabpanel" class="tab-pane fade in active" id="tab-item-1">
+							<!-- <div id="donut-chart"></div> -->
 
 
-									<div style="padding:20px">
-										<div>
-											<canvas id="lineChart" height="195"></canvas>
-										</div>
-									</div>
-
-									<div class="row statsInfo clearfix">
-										<div class="col-xs-6 i">
-											<div class="count">256,521</div>
-											<div class="text">monthly total</div>
-										</div>
-										<div class="col-xs-6 i">
-											<div class="count">10,907</div>
-											<div class="text">today total</div>
-										</div>
-									</div>
+							<div style="padding:20px">
+								<div>
+									<canvas id="lineChart" height="195"></canvas>
 								</div>
+							</div>
 
-								<!-- Used devices -->
-								<div role="tabpanel" class="tab-pane fade" id="tab-item-2">
-									<div class="side-padding-25">
-										<p>Mauris vitae felis vel velit rutrum accumsan. Sed quis vehicula purus. In non sem bibendum, gravida nisl in, lacinia elit. Sed vel tortor ligula. Mauris consectetur massa ac tellus vestibulum tempus non et augue. Vivamus condimentum in justo eu ornare. Curabitur arcu tellus, venenatis pulvinar ultricies vitae, vulputate id enim. Fusce eros ex, venenatis sit amet magna at, tempor interdum sem. Sed at erat eget lacus condimentum ultrices a in est. Morbi vitae dolor ut ex dignissim molestie eget facilisis ligula. Phasellus ornare interdum leo, ut facilisis sem pretium ut. Vivamus semper feugiat fermentum. Nam eu maximus mi.</p>
-										<p>Proin laoreet accumsan odio interdum mattis. In et ante elementum, pharetra neque nec, maximus metus. In eu tristique risus. Vivamus tempor id sapien id lacinia. Ut tincidunt quam sed tortor lacinia, quis vulputate odio faucibus. Donec cursus vel diam a molestie. Praesent sit amet viverra diam. Phasellus eleifend blandit varius. Integer scelerisque massa vitae felis consequat blandit.</p>
-									</div>
-
-									<div class="row statsInfo clearfix">
-										<div class="col-xs-6 i">
-											<div class="count">256,521</div>
-											<div class="text">monthly total</div>
-										</div>
-										<div class="col-xs-6 i">
-											<div class="count">10,907</div>
-											<div class="text">today total</div>
-										</div>
-									</div>
+							<div class="row statsInfo clearfix">
+								<div class="col-xs-6 i">
+									<div class="count">256,521</div>
+									<div class="text">monthly total</div>
+								</div>
+								<div class="col-xs-6 i">
+									<div class="count">10,907</div>
+									<div class="text">today total</div>
 								</div>
 							</div>
 						</div>
-					</div>
 
-					<div class="col-xs-12 col-md-6">
-						<div class="row">
-							<div class="col-xs-6 ct-pie-chart">
-								<div class="box box-without-padding">
-									<div id="ct-chart-1" class="ct-perfect-fourth"></div>
-									<div class="text">Free storage</div>
-									<div class="info"><span>77</span>%</div>
-								</div>
-							</div>
-							<div class="col-xs-6 ct-pie-chart">
-								<div class="box box-without-padding">
-									<div id="ct-chart-2" class="ct-perfect-fourth"></div>
-									<div class="text">Bandwidth</div>
-									<div class="info"><span>1,5</span>Gb/s</div>
-								</div>
+						<!-- Used devices -->
+						<div role="tabpanel" class="tab-pane fade" id="tab-item-2">
+							<div class="side-padding-25">
+								<p>Mauris vitae felis vel velit rutrum accumsan. Sed quis vehicula purus. In non sem bibendum, gravida nisl in, lacinia elit. Sed vel tortor ligula. Mauris consectetur massa ac tellus vestibulum tempus non et augue. Vivamus condimentum in justo eu ornare. Curabitur arcu tellus, venenatis pulvinar ultricies vitae, vulputate id enim. Fusce eros ex, venenatis sit amet magna at, tempor interdum sem. Sed at erat eget lacus condimentum ultrices a in est. Morbi vitae dolor ut ex dignissim molestie eget facilisis ligula. Phasellus ornare interdum leo, ut facilisis sem pretium ut. Vivamus semper feugiat fermentum. Nam eu maximus mi.</p>
+								<p>Proin laoreet accumsan odio interdum mattis. In et ante elementum, pharetra neque nec, maximus metus. In eu tristique risus. Vivamus tempor id sapien id lacinia. Ut tincidunt quam sed tortor lacinia, quis vulputate odio faucibus. Donec cursus vel diam a molestie. Praesent sit amet viverra diam. Phasellus eleifend blandit varius. Integer scelerisque massa vitae felis consequat blandit.</p>
 							</div>
 
-							<div class="col-xs-12">
-								<div class="box box-without-padding">
-									<div class="clearfix boxHeader">
-										<h2 class="boxTitle pull-left">Recent tasks</h2>
-										<div class="btn-group pull-right boxHeaderOptions">
-											<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-												<i class="zmdi zmdi-more-vert"></i>
-											</button>
-											<ul class="dropdown-menu">
-												<li><a href="#" title="#"><i class="zmdi zmdi-time-restore zmdi-hc-fw"></i> Time span</a></li>
-												<li><a href="#" title="#"><i class="zmdi zmdi-chart zmdi-hc-fw"></i> Chart type</a></li>
-												<li><a href="#" title="#"><i class="zmdi zmdi-refresh zmdi-hc-fw"></i> Refresh</a></li>
-											</ul>
-										</div>	
-									</div>
-
-									<div class="recentTasks">
-										<div class="checkboxes checkboxes-sm">
-											<div class="i">
-												<label>
-													<input type="checkbox">
-													<span>Lorem ipsum dlores amet voluptates quidem</span>
-												</label>
-											</div>
-											<div class="i">
-												<label>
-													<input type="checkbox" checked>
-													<span>Voluptates iusto quidem harem rerum</span>
-												</label>
-											</div>
-											<div class="i">
-												<label>
-													<input type="checkbox">
-													<span>Nullam iusto ducimus 24/7</span>
-												</label>
-											</div>
-											<div class="i">
-												<label>
-													<input type="checkbox">
-													<span>Curabitur arcu massa</span>
-												</label>
-											</div>
-											<div class="i">
-												<label>
-													<input type="checkbox">
-													<span>Aenean imperdiet eros eu ante aliquet</span>
-												</label>
-											</div>
-											<div class="i">
-												<label>
-													<input type="checkbox">
-													<span>In vulputate ac turpis at pellentesque</span>
-												</label>
-											</div>
-										</div>
-									</div>
+							<div class="row statsInfo clearfix">
+								<div class="col-xs-6 i">
+									<div class="count">256,521</div>
+									<div class="text">monthly total</div>
+								</div>
+								<div class="col-xs-6 i">
+									<div class="count">10,907</div>
+									<div class="text">today total</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+			</div>
 
+			<div class="col-xs-12 col-md-6">
 				<div class="row">
-					<!-- Sharpen stats -->
-					<div class="col-xs-12 col-sm-6 col-lg-3">
+					<div class="col-xs-6 ct-pie-chart">
 						<div class="box box-without-padding">
-							<div class="bgTitle">
-								<h3 class="boxTitle">Sharpen</h3>
-							</div>
-							<div class="simpleList simpleListLighten">
-								<ul>
-									<li>
-										<a href="#" title="#" class="clearfix">
-											<span class="pull-left"><i class="zmdi zmdi-accounts-add zmdi-hc-fw icon"></i> Followers</span>
-											<span class="pull-right info">109,073</span>
-										</a>
-									</li>
-									<li>
-										<a href="#" title="#" class="clearfix">
-											<span class="pull-left"><i class="zmdi zmdi-accounts-list-alt zmdi-hc-fw icon"></i> Subscribers</span>
-											<span class="pull-right info">26,114</span>
-										</a>
-									</li>
-									<li>
-										<a href="#" title="#" class="clearfix">
-											<span class="pull-left"><i class="zmdi zmdi-assignment-o zmdi-hc-fw icon"></i> Products sold</span>
-											<span class="pull-right info">1,557,669</span>
-										</a>
-									</li>
-									<li>
-										<a href="#" title="#" class="clearfix">
-											<span class="pull-left"><i class="zmdi zmdi-bookmark zmdi-hc-fw icon"></i> Awards</span>
-											<span class="pull-right info">14</span>
-										</a>
-									</li>
-								</ul>
-							</div>
+							<div id="ct-chart-1" class="ct-perfect-fourth"></div>
+							<div class="text">Free storage</div>
+							<div class="info"><span>77</span>%</div>
+						</div>
+					</div>
+					<div class="col-xs-6 ct-pie-chart">
+						<div class="box box-without-padding">
+							<div id="ct-chart-2" class="ct-perfect-fourth"></div>
+							<div class="text">Bandwidth</div>
+							<div class="info"><span>1,5</span>Gb/s</div>
 						</div>
 					</div>
 
-					<!-- Charts -->
-					<div class="col-xs-12 col-sm-6 col-lg-3 pull-right">
-
-						<!-- Sales -->
+					<div class="col-xs-12">
 						<div class="box box-without-padding">
-							<div id="line-chart-1-wrap" class="line-chart-wrap">
-								<div class="clearfix boxHeader">
-									<h2 class="boxTitle pull-left">Sales</h2>
-									<div class="btn-group pull-right boxHeaderOptions">
-										<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											<i class="zmdi zmdi-more-vert"></i>
-										</button>
-										<ul class="dropdown-menu">
-											<li><a href="#" title="#"><i class="zmdi zmdi-time-restore zmdi-hc-fw"></i> Time span</a></li>
-											<li><a href="#" title="#"><i class="zmdi zmdi-chart zmdi-hc-fw"></i> Chart type</a></li>
-											<li><a href="#" title="#"><i class="zmdi zmdi-refresh zmdi-hc-fw"></i> Refresh</a></li>
-										</ul>
-									</div>
-								</div>
-
-								<div class="clearfix stats">
-									<div class="count pull-left">2,547</div>
-									<div class="info pull-left">Last month<br /><i class="zmdi zmdi-trending-up zmdi-hc-fw"></i> 4%</div>
-								</div>
-
-								<div id="line-chart-1" class="line-chart"></div>
-							</div>
-						</div>
-						
-						<!-- Subscribers -->
-						<div class="box box-without-padding">
-							<div id="line-chart-2-wrap" class="line-chart-wrap">
-								<div class="clearfix boxHeader">
-									<h2 class="boxTitle pull-left">Subscribers</h2>
-									<div class="btn-group pull-right boxHeaderOptions">
-										<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											<i class="zmdi zmdi-more-vert"></i>
-										</button>
-										<ul class="dropdown-menu">
-											<li><a href="#" title="#"><i class="zmdi zmdi-time-restore zmdi-hc-fw"></i> Time span</a></li>
-											<li><a href="#" title="#"><i class="zmdi zmdi-chart zmdi-hc-fw"></i> Chart type</a></li>
-											<li><a href="#" title="#"><i class="zmdi zmdi-refresh zmdi-hc-fw"></i> Refresh</a></li>
-										</ul>
-									</div>
-								</div>
-
-								<div class="clearfix stats">
-									<div class="count pull-left">32,547</div>
-									<div class="info pull-left">Last month<br /><i class="zmdi zmdi-trending-up zmdi-hc-fw"></i> 4%</div>
-								</div>
-
-								<div id="line-chart-2" class="line-chart"></div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Recent orders -->
-					<div class="col-xs-12 col-lg-6">
-						<div class="box box-without-padding">
-							<div class="clearfix boxHeader boxHeaderBorders">
-								<h2 class="boxTitle pull-left">Recent orders</h2>
+							<div class="clearfix boxHeader">
+								<h2 class="boxTitle pull-left">Recent tasks</h2>
 								<div class="btn-group pull-right boxHeaderOptions">
 									<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 										<i class="zmdi zmdi-more-vert"></i>
@@ -592,49 +156,204 @@
 								</div>	
 							</div>
 
-							<div class="simpleList simpleListImages">
-								<ul>
-									<li>
-										<a href="#" title="#">
-											<i class="zmdi zmdi-chevron-right arrow"></i>
-											<div class="image">
-												<img src="tmp/iphone.png" alt="#" width="81" height="66">
-											</div>
-											iPhone 6s + Apple Green cover IU/T
-											<span class="info">6 min. ago</span>
-										</a>
-									</li>
-									<li>
-										<a href="#" title="#">
-											<i class="zmdi zmdi-chevron-right arrow"></i>
-											<div class="image">
-												<img src="tmp/macbook.png" alt="#" width="96" height="60">
-											</div>
-											MacBook Pro 15 "Retina CZ 2014
-											<span class="info">9 min. ago</span>
-										</a>
-									</li>
-									<li>
-										<a href="#" title="#">
-											<i class="zmdi zmdi-chevron-right arrow"></i>
-											<div class="image">
-												<img src="tmp/samsung.png" alt="#" width="65" height="73">
-											</div>
-											Samsung Galaxy S6 edge (SM-G925F) 32GB Black Sapphire
-											<span class="info">15 min. ago</span>
-										</a>
-									</li>
-								</ul>
+							<div class="recentTasks">
+								<div class="checkboxes checkboxes-sm">
+									<div class="i">
+										<label>
+											<input type="checkbox">
+											<span>Lorem ipsum dlores amet voluptates quidem</span>
+										</label>
+									</div>
+									<div class="i">
+										<label>
+											<input type="checkbox" checked>
+											<span>Voluptates iusto quidem harem rerum</span>
+										</label>
+									</div>
+									<div class="i">
+										<label>
+											<input type="checkbox">
+											<span>Nullam iusto ducimus 24/7</span>
+										</label>
+									</div>
+									<div class="i">
+										<label>
+											<input type="checkbox">
+											<span>Curabitur arcu massa</span>
+										</label>
+									</div>
+									<div class="i">
+										<label>
+											<input type="checkbox">
+											<span>Aenean imperdiet eros eu ante aliquet</span>
+										</label>
+									</div>
+									<div class="i">
+										<label>
+											<input type="checkbox">
+											<span>In vulputate ac turpis at pellentesque</span>
+										</label>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+
+		<div class="row">
+			<!-- Sharpen stats -->
+			<div class="col-xs-12 col-sm-6 col-lg-3">
+				<div class="box box-without-padding">
+					<div class="bgTitle">
+						<h3 class="boxTitle">Sharpen</h3>
+					</div>
+					<div class="simpleList simpleListLighten">
+						<ul>
+							<li>
+								<a href="#" title="#" class="clearfix">
+									<span class="pull-left"><i class="zmdi zmdi-accounts-add zmdi-hc-fw icon"></i> Followers</span>
+									<span class="pull-right info">109,073</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" title="#" class="clearfix">
+									<span class="pull-left"><i class="zmdi zmdi-accounts-list-alt zmdi-hc-fw icon"></i> Subscribers</span>
+									<span class="pull-right info">26,114</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" title="#" class="clearfix">
+									<span class="pull-left"><i class="zmdi zmdi-assignment-o zmdi-hc-fw icon"></i> Products sold</span>
+									<span class="pull-right info">1,557,669</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" title="#" class="clearfix">
+									<span class="pull-left"><i class="zmdi zmdi-bookmark zmdi-hc-fw icon"></i> Awards</span>
+									<span class="pull-right info">14</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- Charts -->
+			<div class="col-xs-12 col-sm-6 col-lg-3 pull-right">
+
+				<!-- Sales -->
+				<div class="box box-without-padding">
+					<div id="line-chart-1-wrap" class="line-chart-wrap">
+						<div class="clearfix boxHeader">
+							<h2 class="boxTitle pull-left">Sales</h2>
+							<div class="btn-group pull-right boxHeaderOptions">
+								<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<i class="zmdi zmdi-more-vert"></i>
+								</button>
+								<ul class="dropdown-menu">
+									<li><a href="#" title="#"><i class="zmdi zmdi-time-restore zmdi-hc-fw"></i> Time span</a></li>
+									<li><a href="#" title="#"><i class="zmdi zmdi-chart zmdi-hc-fw"></i> Chart type</a></li>
+									<li><a href="#" title="#"><i class="zmdi zmdi-refresh zmdi-hc-fw"></i> Refresh</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="clearfix stats">
+							<div class="count pull-left">2,547</div>
+							<div class="info pull-left">Last month<br /><i class="zmdi zmdi-trending-up zmdi-hc-fw"></i> 4%</div>
+						</div>
+
+						<div id="line-chart-1" class="line-chart"></div>
+					</div>
+				</div>
+				
+				<!-- Subscribers -->
+				<div class="box box-without-padding">
+					<div id="line-chart-2-wrap" class="line-chart-wrap">
+						<div class="clearfix boxHeader">
+							<h2 class="boxTitle pull-left">Subscribers</h2>
+							<div class="btn-group pull-right boxHeaderOptions">
+								<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<i class="zmdi zmdi-more-vert"></i>
+								</button>
+								<ul class="dropdown-menu">
+									<li><a href="#" title="#"><i class="zmdi zmdi-time-restore zmdi-hc-fw"></i> Time span</a></li>
+									<li><a href="#" title="#"><i class="zmdi zmdi-chart zmdi-hc-fw"></i> Chart type</a></li>
+									<li><a href="#" title="#"><i class="zmdi zmdi-refresh zmdi-hc-fw"></i> Refresh</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="clearfix stats">
+							<div class="count pull-left">32,547</div>
+							<div class="info pull-left">Last month<br /><i class="zmdi zmdi-trending-up zmdi-hc-fw"></i> 4%</div>
+						</div>
+
+						<div id="line-chart-2" class="line-chart"></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Recent orders -->
+			<div class="col-xs-12 col-lg-6">
+				<div class="box box-without-padding">
+					<div class="clearfix boxHeader boxHeaderBorders">
+						<h2 class="boxTitle pull-left">Recent orders</h2>
+						<div class="btn-group pull-right boxHeaderOptions">
+							<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="zmdi zmdi-more-vert"></i>
+							</button>
+							<ul class="dropdown-menu">
+								<li><a href="#" title="#"><i class="zmdi zmdi-time-restore zmdi-hc-fw"></i> Time span</a></li>
+								<li><a href="#" title="#"><i class="zmdi zmdi-chart zmdi-hc-fw"></i> Chart type</a></li>
+								<li><a href="#" title="#"><i class="zmdi zmdi-refresh zmdi-hc-fw"></i> Refresh</a></li>
+							</ul>
+						</div>	
+					</div>
+
+					<div class="simpleList simpleListImages">
+						<ul>
+							<li>
+								<a href="#" title="#">
+									<i class="zmdi zmdi-chevron-right arrow"></i>
+									<div class="image">
+										<img src="tmp/iphone.png" alt="#" width="81" height="66">
+									</div>
+									iPhone 6s + Apple Green cover IU/T
+									<span class="info">6 min. ago</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" title="#">
+									<i class="zmdi zmdi-chevron-right arrow"></i>
+									<div class="image">
+										<img src="tmp/macbook.png" alt="#" width="96" height="60">
+									</div>
+									MacBook Pro 15 "Retina CZ 2014
+									<span class="info">9 min. ago</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" title="#">
+									<i class="zmdi zmdi-chevron-right arrow"></i>
+									<div class="image">
+										<img src="tmp/samsung.png" alt="#" width="65" height="73">
+									</div>
+									Samsung Galaxy S6 edge (SM-G925F) 32GB Black Sapphire
+									<span class="info">15 min. ago</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	{% endblock %}
 
 	<!-- Search modal -->
-	<div class="modal fade in" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
+<!-- 	<div class="modal fade in" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-body">
@@ -645,24 +364,4 @@
 				</div>
 			</div>
 		</div>
-	</div>
-
-	<!-- JS -->
-	<script src="assets/js/jquery-1.11.3.min.js"></script>
-	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-	<script src="assets/js/jquery-ui.min.js"></script>
-	<script src="assets/js/select2.min.js"></script>
-	<script src="assets/js/parsley.min.js"></script>
-	<script src="assets/js/throttle-debounce.min.js"></script>
-	<script src="assets/js/jquery.shuffle.min.js"></script>
-	<script src="assets/js/autosize.min.js"></script>
-	<script src="assets/js/raphael-min.js"></script>
-	<script src="assets/js/morris.min.js"></script>
-	<script src="assets/js/Chart.min.js"></script>
-	<script src="assets/js/chartist.min.js"></script>
-	<script src="assets/js/jquery.fullscreen.min.js"></script>
-	<script src="assets/js/app.min.js"></script>
-
-	<div class="visible-xs visible-sm extendedChecker"></div>
-</body>
-templates/</html>
+	</div> -->

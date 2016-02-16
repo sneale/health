@@ -1,0 +1,33 @@
+
+<html class="no-js" lang="">
+	<head>
+		{% block styles %}{% endblock %}
+		{% block extra-styles %}{% endblock %}
+		{% block scripts %}{% endblock %}
+		{% block extra-scripts %}{% endblock %}
+	</head>
+	<body>
+		<header id="header">
+			{% block header %}
+				{% include "header.html" %}
+			{% endblock %}
+		</header>
+
+		<aside class="aside">
+			{% block sidebar %}
+				{% include "sidebar.html" %}
+			{% endblock %}
+		</aside>
+
+		<!-- Page Wrap -->
+		<div class="pageWrap">
+
+			<!-- Page content -->
+			<div class="pageContent extended">
+				<div class="container">
+					{% block container %}{% endblock %}
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

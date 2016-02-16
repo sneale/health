@@ -59,7 +59,7 @@ ROOT_URLCONF = 'health.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -124,8 +124,10 @@ USE_TZ = True
 
 import os.path
 
-STATIC_ROOT = ''
+STATIC_ROOT = '/home/sam/health/challenge/static/'
 
-STATIC_URL = '/challenge/assets/'
+STATIC_URL = '/challenge/static/'
 
-STATICFILES_DIRS = ('/home/sam/health/challenge/assets',)
+STATICFILES_DIRS = [
+     os.path.join(BASE_DIR, "static"),
+]

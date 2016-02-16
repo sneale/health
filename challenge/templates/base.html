@@ -1,0 +1,44 @@
+{% extends "core.html" %}
+{% load staticfiles %}
+
+{% block scripts %}
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Health Challenge</title>
+	<meta name="description" content="...">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Icons -->
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<script src="{% static 'js/modernizr-2.8.3.min.js' %}"></script>
+
+	<script src="{% static 'js/jquery-1.11.3.min.js' %}"></script>
+	<script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/jquery-ui.min.js' %}"></script>
+	<script src="{% static 'js/select2.min.js' %}"></script>
+	<script src="{% static 'js/parsley.min.js' %}"></script>
+	<script src="{% static 'js/throttle-debounce.min.js' %}"></script>
+	<script src="{% static 'js/jquery.shuffle.min.js' %}"></script>
+	<script src="{% static 'js/autosize.min.js' %}"></script>
+	<script src="{% static 'js/raphael-min.js' %}"></script>
+	<script src="{% static 'js/morris.min.js' %}"></script>
+	<script src="{% static 'js/Chart.min.js' %}"></script>
+	<script src="{% static 'js/chartist.min.js' %}"></script>
+	<script src="{% static 'js/jquery.fullscreen.min.js' %}"></script>
+	<script src="{% static 'js/app.min.js' %}"></script>
+{% endblock %}
+
+{% block styles %}
+	<!-- CSS -->
+	<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'fonts/material-design-iconic-font/css/material-design-iconic-font.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/jquery-ui.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/select2.min.css' %}">
+	<link rel="stylesheet" href="{% static 'font-awesome-4.4.0/css/font-awesome.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/fontello.css' %}">
+	<link rel="stylesheet" href="{% static 'css/chartist.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/app.min.css' %}">
+	
+	<!-- Google fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+{% endblock %}

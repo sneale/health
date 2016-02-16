@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block container %}
+<div class="box rte box-without-bottom-padding">
+	<h2 class="boxHeadline">Customers</h2>
+<!-- 	<h3 class="boxHeadlineSub">Subtitle of the table goes here</h3>
+ -->	
+	<div class="tableWrap table-responsive">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>id</th>
+					<th>Name</th>
+					<th># of Teams</th>
+					<th>Manager</th>
+					<th>Date Added</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for customer in object_list %}
+				<tr>
+					<th scope="row">{{ customer.id }}</th>
+					<td><a href="{{ customer.id }}/teams">{{ customer.name }}</a></td>
+					<td>{{ customer.teams.count }}</td>
+					<td>{{ customer.manager }}</td>
+					<td>{{ customer.created_date.date }}</span></td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div>
+{% endblock %}

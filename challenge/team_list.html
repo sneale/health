@@ -1,0 +1,9 @@
+{% extends "../base.html" %}
+
+{% block container %}
+	<h2> Teams </h2>
+	{% for team in object_list %}
+		<li>{{ team.name }}</li>
+	{% endfor %}
+
+{% endblock %}
